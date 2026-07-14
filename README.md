@@ -4,12 +4,18 @@
 
 这是一个无需构建、可直接侧载的 Chrome Manifest V3 扩展。所有游戏逻辑都在本地运行，不需要账号、服务器或联网权限，也不会读取网页文字内容。
 
+## 下载
+
+[下载 DOM Mower v0.3.0（ZIP）](https://github.com/Fov6363/dom-mower/releases/download/v0.3.0/dom-mower-v0.3.0.zip)
+
+下载后需要先解压。Chrome 不支持直接安装普通 ZIP，需要通过“加载已解压的扩展程序”安装。
+
 ## 安装试玩
 
-1. 下载本仓库并解压，或执行 `git clone https://github.com/Fov6363/dom-mower.git`。
+1. 下载上面的 ZIP 并解压。
 2. 在 Chrome 地址栏打开 `chrome://extensions`。
 3. 打开右上角的“开发者模式”。
-4. 点击“加载已解压的扩展程序”，选择解压后的 `dom-mower` 目录。
+4. 点击“加载已解压的扩展程序”，选择解压后的 `dom-mower-v0.3.0` 目录。
 5. 打开一个普通网页，建议先用 Wikipedia 文章页。
 6. 点击工具栏中的 DOM Mower 扩展图标开始游戏。
 
@@ -48,7 +54,7 @@
 
 ## 开发
 
-项目使用原生 JavaScript、Canvas 2D 和 CSS，没有依赖与构建步骤。修改文件后，在 `chrome://extensions` 中点击扩展卡片的刷新按钮即可重新加载。
+项目使用原生 JavaScript、Canvas 2D 和 CSS，没有依赖与构建步骤。可以执行 `git clone https://github.com/Fov6363/dom-mower.git` 获取源码。修改文件后，在 `chrome://extensions` 中点击扩展卡片的刷新按钮即可重新加载。
 
 ## License
 
