@@ -2,6 +2,8 @@
 
 [English](README.md) | 简体中文
 
+[在线试玩](https://fov6363.github.io/dom-mower/)
+
 把当前网页变成一局轻量割草游戏：网页元素是敌人，页面结构就是关卡。
 
 DOM Mower 是一个无需构建、可直接在本地安装的 Chrome Manifest V3 扩展。所有游戏逻辑都在设备本地运行，不需要账号、服务器或网络权限，也不会读取网页的文字内容。
