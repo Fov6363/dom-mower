@@ -1,0 +1,28 @@
+html.dom-mower-active,
+html.dom-mower-active * {
+  cursor: crosshair !important;
+}
+
+.dom-mower-target {
+  transition: filter 90ms ease, opacity 180ms ease !important;
+}
+
+.dom-mower-hit {
+  animation: dom-mower-hit 120ms ease-out !important;
+  filter: contrast(1.35) saturate(1.8) !important;
+}
+
+.dom-mower-destroyed {
+  visibility: hidden !important;
+}
+
+@keyframes dom-mower-hit {
+  0%, 100% { transform: translate(0, 0); }
+  25% { transform: translate(-3px, 1px); }
+  50% { transform: translate(3px, -1px); }
+  75% { transform: translate(-2px, -1px); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dom-mower-hit { animation: none !important; }
+}

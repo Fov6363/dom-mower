@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "DOM Mower",
+  "version": "0.3.0",
+  "description": "把当前网页变成一局三分钟割草游戏。",
+  "permissions": [
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_title": "启动 DOM Mower"
+  }
+}
