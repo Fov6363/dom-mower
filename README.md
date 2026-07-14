@@ -1,5 +1,7 @@
 # DOM Mower
 
+English | [简体中文](README.zh-CN.md)
+
 Turn the webpage you are viewing into a lightweight survivor game. Web elements become enemies, and the page structure becomes the level.
 
 DOM Mower is a build-free Chrome Manifest V3 extension that can be installed locally. All game logic runs on your device. It requires no account, server, or network access, and it never reads the text content of the page.
