@@ -1,60 +1,60 @@
-# DOM Mower / 网页割草机
+# DOM Mower
 
-把当前网页变成一局轻量割草游戏：网页元素是敌人，页面结构就是关卡。
+Turn the webpage you are viewing into a lightweight survivor game. Web elements become enemies, and the page structure becomes the level.
 
-这是一个无需构建、可直接侧载的 Chrome Manifest V3 扩展。所有游戏逻辑都在本地运行，不需要账号、服务器或联网权限，也不会读取网页文字内容。
+DOM Mower is a build-free Chrome Manifest V3 extension that can be installed locally. All game logic runs on your device. It requires no account, server, or network access, and it never reads the text content of the page.
 
-## 下载
+## Download
 
-[下载 DOM Mower v0.3.0（ZIP）](https://github.com/Fov6363/dom-mower/releases/download/v0.3.0/dom-mower-v0.3.0.zip)
+[Download DOM Mower v0.3.0 (ZIP)](https://github.com/Fov6363/dom-mower/releases/download/v0.3.0/dom-mower-v0.3.0.zip)
 
-下载后需要先解压。Chrome 不支持直接安装普通 ZIP，需要通过“加载已解压的扩展程序”安装。
+Extract the ZIP before installing it. Chrome cannot install a regular ZIP directly, so the extension must be loaded as an unpacked extension.
 
-## 安装试玩
+## Install and Play
 
-1. 下载上面的 ZIP 并解压。
-2. 在 Chrome 地址栏打开 `chrome://extensions`。
-3. 打开右上角的“开发者模式”。
-4. 点击“加载已解压的扩展程序”，选择解压后的 `dom-mower-v0.3.0` 目录。
-5. 打开一个普通网页，建议先用 Wikipedia 文章页。
-6. 点击工具栏中的 DOM Mower 扩展图标开始游戏。
+1. Download and extract the ZIP above.
+2. Open `chrome://extensions` in Chrome.
+3. Enable **Developer mode** in the top-right corner.
+4. Click **Load unpacked** and select the extracted `dom-mower-v0.3.0` directory.
+5. Open a regular webpage. A Wikipedia article is a good place to start.
+6. Click the DOM Mower icon in the Chrome toolbar to start the game.
 
-再次点击扩展图标、点击右上角“退出游戏”，或按 `Esc`，都会退出并恢复网页。
+Click the extension icon again, click **Exit Game** in the top-right corner, or press `Esc` to stop the game and restore the page.
 
-## 当前玩法
+## Gameplay
 
-- `WASD` 或方向键移动，点击画面可自动移动到目标位置。
-- 贯穿子弹自动攻击最近的网页元素，三片旋转刀片负责近战伤害。
-- 按 `1` 或 `⌘/Ctrl+F` 使用“查找”，连锁攻击同类 DOM 元素。
-- 按 `2` 或 `⌘/Ctrl+X` 使用“剪切”，把附近元素收入剪贴板。
-- 按 `3` 或 `⌘/Ctrl+V` 使用“粘贴”，把网页碎片转化成贯穿或爆炸攻击。
-- 击碎元素掉落经验，升级时选择 CSS/DOM 规则，例如 `a`、`img`、`>`、`+`、`.class` 和 `!important`。
-- 按钮会向玩家发射红色子弹。
-- 文字、表单控件和图片清完后，有背景、边框或阴影的大型面板会成为精英怪。
-- 敌人归零后会重新扫描当前画面，确认没有新的有效目标后显示“下一关”。
-- 点击“下一关”会向下滚动约 80% 屏幕并生成新敌人，到达页面底部才最终通关。
+- Move with `WASD` or the arrow keys, or click anywhere to move toward that position.
+- Piercing projectiles automatically attack the nearest web element, while three orbiting blades deal close-range damage.
+- Press `1` or `⌘/Ctrl+F` to use **Find**, chaining attacks across matching DOM elements.
+- Press `2` or `⌘/Ctrl+X` to use **Cut**, collecting nearby elements in the clipboard.
+- Press `3` or `⌘/Ctrl+V` to use **Paste**, turning collected fragments into piercing or explosive attacks.
+- Destroy elements to collect experience. Each level-up offers CSS and DOM rules such as `a`, `img`, `>`, `+`, `.class`, and `!important`.
+- Buttons fire red projectiles at the player.
+- After text, form controls, and images are cleared, large panels with backgrounds, borders, or shadows become elite enemies.
+- When no enemies remain, the game scans the viewport again before showing **Next Level**.
+- **Next Level** scrolls down by roughly 80% of the viewport and generates a new wave. Reaching the bottom of the page completes the run.
 
-## 权限与隐私
+## Permissions and Privacy
 
-扩展仅声明以下权限：
+DOM Mower requests only these permissions:
 
-- `activeTab`：用户点击扩展图标后，读取当前标签页中可见元素的位置和类型。
-- `scripting`：向当前标签页注入游戏逻辑和样式。
-- `storage`：保存本地游戏数据。
+- `activeTab`: reads the position and type of visible elements after you click the extension icon.
+- `scripting`: injects the game logic and styles into the active tab.
+- `storage`: stores local game progress and settings.
 
-扩展不申请全站常驻权限，不包含网络请求、统计 SDK 或用户跟踪。退出游戏后，所有临时样式和游戏界面都会从页面移除。
+The extension does not request persistent access to every website. It contains no network requests, analytics SDKs, or user tracking. All temporary styles and game UI are removed when you exit the game.
 
-## 当前限制
+## Current Limitations
 
-- 只处理页面主滚动条，不处理网页内部的独立滚动容器。
-- 不读取文字内容，只根据元素标签、位置和尺寸生成敌人。
-- 不处理跨域 iframe、Shadow DOM、视频和 Canvas。
-- 浏览器内部页面（例如 `chrome://`）不允许扩展注入。
-- 某些网页使用极端 CSS 时，受击抖动可能与原动画冲突；退出后临时 class 会被移除。
+- Only the main page scrollbar is supported; independently scrolling containers are not.
+- Text content is never read. Enemies are generated only from element tags, positions, and dimensions.
+- Cross-origin iframes, Shadow DOM, video, and Canvas elements are not supported.
+- Chrome does not allow extensions to run on internal pages such as `chrome://`.
+- On pages with aggressive CSS animations, the hit reaction may conflict with existing effects. Temporary classes are still removed when the game exits.
 
-## 开发
+## Development
 
-项目使用原生 JavaScript、Canvas 2D 和 CSS，没有依赖与构建步骤。可以执行 `git clone https://github.com/Fov6363/dom-mower.git` 获取源码。修改文件后，在 `chrome://extensions` 中点击扩展卡片的刷新按钮即可重新加载。
+The project uses vanilla JavaScript, Canvas 2D, and CSS, with no dependencies or build step. Clone the source with `git clone https://github.com/Fov6363/dom-mower.git`. After making changes, reload the extension from `chrome://extensions`.
 
 ## License
 
