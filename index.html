@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Play DOM Mower online and turn this page into a survivor game.">
+    <title>DOM Mower — Play the Demo</title>
+    <link rel="stylesheet" href="./demo.css">
+    <link rel="stylesheet" href="./page-effects.css">
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="wordmark" href="#top" aria-label="DOM Mower home">DOM MOWER</a>
+      <nav aria-label="Main navigation">
+        <a href="#how-it-works">How it works</a>
+        <a href="#field-notes">Field notes</a>
+        <a class="nav-download" href="https://github.com/Fov6363/dom-mower/releases/latest">Download</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A browser game made from the page itself</p>
+          <h1>What if every webpage was a level?</h1>
+          <p class="hero-intro">DOM Mower turns headings, links, buttons, images, and cards into enemies. Move through the page, let your weapons fire automatically, and clear everything in sight.</p>
+          <div class="hero-actions">
+            <button class="start-button" type="button" data-start-demo>Start Demo</button>
+            <a class="text-link" href="https://github.com/Fov6363/dom-mower">View source <span aria-hidden="true">↗</span></a>
+          </div>
+          <p class="demo-note">No extension required for this demo. Use WASD or the arrow keys once the game starts.</p>
+        </div>
+        <figure class="hero-visual">
+          <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Abstract preview of a webpage becoming a game level">
+          <figcaption><span>LIVE SPECIMEN 001</span><strong>This image becomes an elite enemy.</strong></figcaption>
+        </figure>
+      </section>
+
+      <section class="ticker" aria-label="Demo features">
+        <span>REAL DOM</span><span>AUTO ATTACK</span><span>CSS UPGRADES</span><span>NO ACCOUNT</span><span>LOCAL ONLY</span>
+      </section>
+
+      <section class="explainer" id="how-it-works">
+        <div class="section-heading">
+          <p class="eyebrow">The page is the dungeon</p>
+          <h2>Every element has a role.</h2>
+          <p>DOM Mower reads layout and element types—not what the page says—to build a different encounter on every site.</p>
+        </div>
+        <div class="role-grid">
+          <article class="role-card role-text">
+            <span class="role-number">01</span>
+            <h3>Text becomes grass</h3>
+            <p>Paragraphs and list items are numerous, fragile, and satisfying to sweep away in a chain.</p>
+            <a href="#field-notes">Inspect the field</a>
+          </article>
+          <article class="role-card role-link">
+            <span class="role-number">02</span>
+            <h3>Links move fast</h3>
+            <p>Small targets demand better positioning. The Find command helps chain attacks across matching elements.</p>
+            <button type="button">A suspicious button</button>
+          </article>
+          <article class="role-card role-image">
+            <span class="role-number">03</span>
+            <h3>Images hit harder</h3>
+            <p>Large visual blocks carry more health and reward you with a burst of experience when destroyed.</p>
+            <img src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" alt="Color field used as an image enemy">
+          </article>
+          <article class="role-card role-panel">
+            <span class="role-number">04</span>
+            <h3>Panels are elites</h3>
+            <p>Once the smaller elements are gone, painted containers step forward as the final enemies in the viewport.</p>
+            <a href="https://github.com/Fov6363/dom-mower/releases/latest">Get the extension</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="field-notes" id="field-notes">
+        <div class="field-copy">
+          <p class="eyebrow">Field notes / 14 July</p>
+          <h2>A build is made from browser commands.</h2>
+          <p>Instead of collecting generic damage bonuses, you assemble a moveset from familiar browser actions and CSS rules.</p>
+          <blockquote>Find a pattern. Cut it from the page. Paste the fragments back as a weapon.</blockquote>
+        </div>
+        <div class="command-list">
+          <article>
+            <kbd>1 / ⌘F</kbd>
+            <h3>Find</h3>
+            <p>Chains damage through related DOM elements.</p>
+          </article>
+          <article>
+            <kbd>2 / ⌘X</kbd>
+            <h3>Cut</h3>
+            <p>Collects nearby targets in your clipboard.</p>
+          </article>
+          <article>
+            <kbd>3 / ⌘V</kbd>
+            <h3>Paste</h3>
+            <p>Converts saved fragments into explosive attacks.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="code-break">
+        <p class="eyebrow">Your upgrade path</p>
+        <pre><code>a → img → .class → :nth-child → * → !important</code></pre>
+        <p>Selectors change which enemies your commands can reach. Combinators change how damage spreads through the page.</p>
+      </section>
+
+      <section class="dispatch">
+        <div>
+          <p class="eyebrow">Dispatch from the open web</p>
+          <h2>One mechanic.<br>Infinite layouts.</h2>
+        </div>
+        <div class="dispatch-columns">
+          <article>
+            <h3>Wikipedia</h3>
+            <p>Dense fields of text with strong heading bosses and long multi-stage runs.</p>
+          </article>
+          <article>
+            <h3>GitHub</h3>
+            <p>Lists, controls, code blocks, and compact panels create a more tactical level.</p>
+          </article>
+          <article>
+            <h3>News sites</h3>
+            <p>Cards, images, navigation, and popups produce heavier elite encounters.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="final-cta">
+        <p class="eyebrow">Ready for one more run?</p>
+        <h2>Clear this page first.<br>Then clear the web.</h2>
+        <div class="hero-actions">
+          <button class="start-button" type="button" data-start-demo>Play Again</button>
+          <a class="download-button" href="https://github.com/Fov6363/dom-mower/releases/latest">Download Extension</a>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <strong>DOM MOWER</strong>
+      <p>Open source. No account. No tracking.</p>
+      <a href="https://github.com/Fov6363/dom-mower">GitHub</a>
+    </footer>
+
+    <script src="./demo.js"></script>
+  </body>
+</html>

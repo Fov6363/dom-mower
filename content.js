@@ -613,9 +613,9 @@
     actionsNode.append(replay, exit);
     overlay.classList.add("show");
 
-    if (won && chrome?.storage?.local) {
-      const stats = await chrome.storage.local.get({ highScore: 0, pagesCleaned: 0 });
-      await chrome.storage.local.set({ highScore: Math.max(stats.highScore, score), pagesCleaned: stats.pagesCleaned + 1 });
+    if (won && globalThis.chrome?.storage?.local) {
+      const stats = await globalThis.chrome.storage.local.get({ highScore: 0, pagesCleaned: 0 });
+      await globalThis.chrome.storage.local.set({ highScore: Math.max(stats.highScore, score), pagesCleaned: stats.pagesCleaned + 1 });
     }
   }
 
